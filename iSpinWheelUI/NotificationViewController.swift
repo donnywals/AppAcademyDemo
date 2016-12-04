@@ -49,6 +49,8 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             }
             
             let completion: (Bool) -> Void = { completed in
+                let userDefaults = UserDefaults(suiteName: "group.donnywals.iSpin")
+                userDefaults?.set(true, forKey: "did-win-prize")
                 completion(.dismissAndForwardAction)
             }
             
