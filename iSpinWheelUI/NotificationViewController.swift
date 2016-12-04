@@ -14,11 +14,6 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
     @IBOutlet var imageView: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any required interface initialization here.
-    }
-    
     func didReceive(_ notification: UNNotification) {
         guard let wheelImageString = notification.request.content.userInfo["wheel-image"] as? String,
             let wheelImageUrl = URL(string: wheelImageString)
@@ -36,6 +31,29 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
                 self?.imageView.image = image
             }
         }.resume()
+    }
+    
+    func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+        
+        // dismiss if cancelled
+        let responseIdentifier = response.actionIdentifier
+        
+        if responseIdentifier == "cancel" {
+            completion(.dismiss)
+        }
+        
+        // spin if spin-wheel
+        if responseIdentifier == "spin-wheel" {
+            let animations: () -> Void = { [weak self] in
+                self?.imageView.transform = CGAffineTransform(rotationAngle: 5)
+            }
+            
+            let completion: (Bool) -> Void = { completed in
+                completion(.dismissAndForwardAction)
+            }
+            
+            UIView.animate(withDuration: 1, animations: animations, completion: completion)
+        }
     }
 
 }
