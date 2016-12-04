@@ -77,6 +77,7 @@
 		97793BAE1DF4A4B900DEB4B5 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		97793BB11DF4A4B900DEB4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		97793BB31DF4A4B900DEB4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97793BBA1DF4AFB600DEB4B5 /* iSpinWheelUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSpinWheelUI.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +182,7 @@
 		97793BAD1DF4A4B900DEB4B5 /* iSpinWheelUI */ = {
 			isa = PBXGroup;
 			children = (
+				97793BBA1DF4AFB600DEB4B5 /* iSpinWheelUI.entitlements */,
 				97793BAE1DF4A4B900DEB4B5 /* NotificationViewController.swift */,
 				97793BB01DF4A4B900DEB4B5 /* MainInterface.storyboard */,
 				97793BB31DF4A4B900DEB4B5 /* Info.plist */,
@@ -260,6 +262,9 @@
 						DevelopmentTeam = 4JMM8JMG3H;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -274,6 +279,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 4JMM8JMG3H;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -551,6 +561,7 @@
 		97793BB81DF4A4B900DEB4B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = iSpinWheelUI/iSpinWheelUI.entitlements;
 				DEVELOPMENT_TEAM = 4JMM8JMG3H;
 				INFOPLIST_FILE = iSpinWheelUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -565,6 +576,7 @@
 		97793BB91DF4A4B900DEB4B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = iSpinWheelUI/iSpinWheelUI.entitlements;
 				DEVELOPMENT_TEAM = 4JMM8JMG3H;
 				INFOPLIST_FILE = iSpinWheelUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
