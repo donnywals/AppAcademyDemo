@@ -45,11 +45,91 @@
                     <connections>
                         <outlet property="enableNotificationsButton" destination="Aqf-l2-cFM" id="wzh-5F-JCG"/>
                         <outlet property="titleLabel" destination="4g3-Tx-esd" id="8oX-jU-A30"/>
+                        <segue destination="Bx1-Qh-96p" kind="presentation" id="Twy-gD-k4g"/>
+                        <segue destination="WXl-Ha-Y1e" kind="presentation" id="V0K-x1-QoX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Prize Won View Controller-->
+        <scene sceneID="FFJ-Cy-IZ2">
+            <objects>
+                <viewController id="Bx1-Qh-96p" customClass="PrizeWonViewController" customModule="iSpin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EEJ-Nc-0Rh"/>
+                        <viewControllerLayoutGuide type="bottom" id="PSo-JT-8xZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UqC-0M-lOC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome! You've won a prize" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-5A-AsR">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyM-yW-pcf">
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeTapped" destination="Bx1-Qh-96p" eventType="touchUpInside" id="LTy-kD-nMX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8vJ-5A-AsR" secondAttribute="trailing" constant="42" id="0MO-Am-j5U"/>
+                            <constraint firstItem="8vJ-5A-AsR" firstAttribute="centerX" secondItem="UqC-0M-lOC" secondAttribute="centerX" id="5n5-MC-3G7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yyM-yW-pcf" secondAttribute="trailing" id="9Gl-WC-Q39"/>
+                            <constraint firstItem="8vJ-5A-AsR" firstAttribute="leading" secondItem="UqC-0M-lOC" secondAttribute="leadingMargin" constant="41" id="Fst-Cy-UJF"/>
+                            <constraint firstItem="8vJ-5A-AsR" firstAttribute="centerY" secondItem="UqC-0M-lOC" secondAttribute="centerY" id="TM2-An-nOW"/>
+                            <constraint firstItem="yyM-yW-pcf" firstAttribute="top" secondItem="EEJ-Nc-0Rh" secondAttribute="bottom" constant="8" id="k5L-DO-I4C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i00-6h-kup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-188"/>
+        </scene>
+        <!--Lost View Controller-->
+        <scene sceneID="0Pf-ik-1ah">
+            <objects>
+                <viewController id="WXl-Ha-Y1e" customClass="LostViewController" customModule="iSpin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5D2-j8-6eB"/>
+                        <viewControllerLayoutGuide type="bottom" id="0MZ-Z8-W8S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JL8-Of-7vT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D'oh you didn't win! Better luck next time..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHa-EJ-Vk5">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zL-X6-Mkr">
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeTapped" destination="WXl-Ha-Y1e" eventType="touchUpInside" id="zDp-FV-irY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6zL-X6-Mkr" firstAttribute="top" secondItem="5D2-j8-6eB" secondAttribute="bottom" constant="8" id="9x5-B0-ZPg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xHa-EJ-Vk5" secondAttribute="trailing" constant="42" id="OAs-HA-SdL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6zL-X6-Mkr" secondAttribute="trailing" id="Qsa-kt-EK9"/>
+                            <constraint firstItem="xHa-EJ-Vk5" firstAttribute="centerX" secondItem="JL8-Of-7vT" secondAttribute="centerX" id="hFP-7X-1Ss"/>
+                            <constraint firstItem="xHa-EJ-Vk5" firstAttribute="centerY" secondItem="JL8-Of-7vT" secondAttribute="centerY" id="sWy-ZX-UGB"/>
+                            <constraint firstItem="xHa-EJ-Vk5" firstAttribute="leading" secondItem="JL8-Of-7vT" secondAttribute="leadingMargin" constant="41" id="u3o-U6-fii"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zxi-Nl-3nn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="460"/>
         </scene>
     </scenes>
 </document>
