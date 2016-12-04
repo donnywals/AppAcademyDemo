@@ -17,6 +17,11 @@
 		97793B921DF4967800DEB4B5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97793B911DF4967800DEB4B5 /* Data.swift */; };
 		97793B9A1DF49E7D00DEB4B5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97793B991DF49E7D00DEB4B5 /* NotificationService.swift */; };
 		97793B9E1DF49E7D00DEB4B5 /* iSpinWheelExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		97793BAA1DF4A4B900DEB4B5 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97793BA91DF4A4B900DEB4B5 /* UserNotifications.framework */; };
+		97793BAC1DF4A4B900DEB4B5 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97793BAB1DF4A4B900DEB4B5 /* UserNotificationsUI.framework */; };
+		97793BAF1DF4A4B900DEB4B5 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97793BAE1DF4A4B900DEB4B5 /* NotificationViewController.swift */; };
+		97793BB21DF4A4B900DEB4B5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97793BB01DF4A4B900DEB4B5 /* MainInterface.storyboard */; };
+		97793BB61DF4A4B900DEB4B5 /* iSpinWheelUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 97793BA71DF4A4B900DEB4B5 /* iSpinWheelUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,13 @@
 			remoteGlobalIDString = 97793B961DF49E7D00DEB4B5;
 			remoteInfo = iSpinWheelExtension;
 		};
+		97793BB41DF4A4B900DEB4B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975BA11A1DF4720A0069ECE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97793BA61DF4A4B900DEB4B5;
+			remoteInfo = iSpinWheelUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				97793BB61DF4A4B900DEB4B5 /* iSpinWheelUI.appex in Embed App Extensions */,
 				97793B9E1DF49E7D00DEB4B5 /* iSpinWheelExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -58,6 +71,12 @@
 		97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iSpinWheelExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		97793B991DF49E7D00DEB4B5 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		97793B9B1DF49E7D00DEB4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97793BA71DF4A4B900DEB4B5 /* iSpinWheelUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iSpinWheelUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		97793BA91DF4A4B900DEB4B5 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		97793BAB1DF4A4B900DEB4B5 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		97793BAE1DF4A4B900DEB4B5 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		97793BB11DF4A4B900DEB4B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		97793BB31DF4A4B900DEB4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +94,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97793BA41DF4A4B900DEB4B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97793BAC1DF4A4B900DEB4B5 /* UserNotificationsUI.framework in Frameworks */,
+				97793BAA1DF4A4B900DEB4B5 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +111,8 @@
 			children = (
 				975BA1241DF4720A0069ECE2 /* iSpin */,
 				97793B981DF49E7D00DEB4B5 /* iSpinWheelExtension */,
+				97793BAD1DF4A4B900DEB4B5 /* iSpinWheelUI */,
+				97793BA81DF4A4B900DEB4B5 /* Frameworks */,
 				975BA1231DF4720A0069ECE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +122,7 @@
 			children = (
 				975BA1221DF4720A0069ECE2 /* iSpin.app */,
 				97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */,
+				97793BA71DF4A4B900DEB4B5 /* iSpinWheelUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +169,25 @@
 			path = iSpinWheelExtension;
 			sourceTree = "<group>";
 		};
+		97793BA81DF4A4B900DEB4B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				97793BA91DF4A4B900DEB4B5 /* UserNotifications.framework */,
+				97793BAB1DF4A4B900DEB4B5 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97793BAD1DF4A4B900DEB4B5 /* iSpinWheelUI */ = {
+			isa = PBXGroup;
+			children = (
+				97793BAE1DF4A4B900DEB4B5 /* NotificationViewController.swift */,
+				97793BB01DF4A4B900DEB4B5 /* MainInterface.storyboard */,
+				97793BB31DF4A4B900DEB4B5 /* Info.plist */,
+			);
+			path = iSpinWheelUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +204,7 @@
 			);
 			dependencies = (
 				97793B9D1DF49E7D00DEB4B5 /* PBXTargetDependency */,
+				97793BB51DF4A4B900DEB4B5 /* PBXTargetDependency */,
 			);
 			name = iSpin;
 			productName = iSpin;
@@ -175,6 +226,23 @@
 			name = iSpinWheelExtension;
 			productName = iSpinWheelExtension;
 			productReference = 97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		97793BA61DF4A4B900DEB4B5 /* iSpinWheelUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97793BB71DF4A4B900DEB4B5 /* Build configuration list for PBXNativeTarget "iSpinWheelUI" */;
+			buildPhases = (
+				97793BA31DF4A4B900DEB4B5 /* Sources */,
+				97793BA41DF4A4B900DEB4B5 /* Frameworks */,
+				97793BA51DF4A4B900DEB4B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iSpinWheelUI;
+			productName = iSpinWheelUI;
+			productReference = 97793BA71DF4A4B900DEB4B5 /* iSpinWheelUI.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -202,6 +270,11 @@
 						DevelopmentTeam = 4JMM8JMG3H;
 						ProvisioningStyle = Automatic;
 					};
+					97793BA61DF4A4B900DEB4B5 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4JMM8JMG3H;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 975BA11D1DF4720A0069ECE2 /* Build configuration list for PBXProject "iSpin" */;
@@ -219,6 +292,7 @@
 			targets = (
 				975BA1211DF4720A0069ECE2 /* iSpin */,
 				97793B961DF49E7D00DEB4B5 /* iSpinWheelExtension */,
+				97793BA61DF4A4B900DEB4B5 /* iSpinWheelUI */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +312,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97793BA51DF4A4B900DEB4B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97793BB21DF4A4B900DEB4B5 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +346,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97793BA31DF4A4B900DEB4B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97793BAF1DF4A4B900DEB4B5 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -271,6 +361,11 @@
 			isa = PBXTargetDependency;
 			target = 97793B961DF49E7D00DEB4B5 /* iSpinWheelExtension */;
 			targetProxy = 97793B9C1DF49E7D00DEB4B5 /* PBXContainerItemProxy */;
+		};
+		97793BB51DF4A4B900DEB4B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97793BA61DF4A4B900DEB4B5 /* iSpinWheelUI */;
+			targetProxy = 97793BB41DF4A4B900DEB4B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -289,6 +384,14 @@
 				975BA12F1DF4720A0069ECE2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		97793BB01DF4A4B900DEB4B5 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97793BB11DF4A4B900DEB4B5 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -445,6 +548,34 @@
 			};
 			name = Release;
 		};
+		97793BB81DF4A4B900DEB4B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4JMM8JMG3H;
+				INFOPLIST_FILE = iSpinWheelUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.donnywals.iSpin.iSpinWheelUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		97793BB91DF4A4B900DEB4B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4JMM8JMG3H;
+				INFOPLIST_FILE = iSpinWheelUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.donnywals.iSpin.iSpinWheelUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,6 +602,14 @@
 			buildConfigurations = (
 				97793BA01DF49E7D00DEB4B5 /* Debug */,
 				97793BA11DF49E7D00DEB4B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		97793BB71DF4A4B900DEB4B5 /* Build configuration list for PBXNativeTarget "iSpinWheelUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97793BB81DF4A4B900DEB4B5 /* Debug */,
+				97793BB91DF4A4B900DEB4B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

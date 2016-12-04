@@ -12,7 +12,7 @@ import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
-    @IBOutlet var label: UILabel?
+    @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,22 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     }
     
     func didReceive(_ notification: UNNotification) {
-        self.label?.text = notification.request.content.body
+        guard let wheelImageString = notification.request.content.userInfo["wheel-image"] as? String,
+            let wheelImageUrl = URL(string: wheelImageString)
+            else { return }
+        
+        // store image, add media
+        URLSession.shared.dataTask(with: wheelImageUrl) { [weak self] data, response, error in
+            
+            guard let data = data
+                else { return }
+            
+            let image = UIImage(data: data)
+            
+            DispatchQueue.main.async {
+                self?.imageView.image = image
+            }
+        }.resume()
     }
 
 }
