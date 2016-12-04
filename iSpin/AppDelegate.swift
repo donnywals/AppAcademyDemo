@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // register actions
         let notificationCenter = UNUserNotificationCenter.current()
-        let spinAction = UNNotificationAction(identifier: "spin-wheel", title: "Spin the wheel", options: [])
+        let spinAction = UNNotificationAction(identifier: "spin-wheel", title: "Spin the wheel", options: [.foreground])
         let cancelAction = UNNotificationAction(identifier: "cancel", title: "Cancel", options: [.destructive])
         let category = UNNotificationCategory(identifier: "wheel", actions: [spinAction, cancelAction],
                                               intentIdentifiers: [], options: [])
