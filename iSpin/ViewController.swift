@@ -36,6 +36,7 @@ class ViewController: UIViewController {
                 notificationCenter.requestAuthorization(options: [.alert, .sound]) { success, error in
                     DispatchQueue.main.async {
                         if success {
+                            UIApplication.shared.registerForRemoteNotifications()
                             self?.enableNotificationsAllowedUI()
                         } else {
                             self?.enableNotificationsDeniedUI()
