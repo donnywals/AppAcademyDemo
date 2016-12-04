@@ -7,20 +7,47 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
     @IBOutlet var enableNotificationsButton: UIButton!
     @IBOutlet var titleLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        // check if notifications are enabled and call the relevant method if needed
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { [weak self] settings in
+            DispatchQueue.main.async {
+                if settings.authorizationStatus == .authorized {
+                    self?.enableNotificationsAllowedUI()
+                } else if settings.authorizationStatus == .denied {
+                    self?.enableNotificationsDeniedUI()
+                }
+            }
+        }
     }
 
     @IBAction func enableNotificationsTapped() {
-        // check if notifications are denied and open settings if needed
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { [weak self] settings in
+            if settings.authorizationStatus == .notDetermined {
+                notificationCenter.requestAuthorization(options: [.alert, .sound]) { success, error in
+                    DispatchQueue.main.async {
+                        if success {
+                            self?.enableNotificationsAllowedUI()
+                        } else {
+                            self?.enableNotificationsDeniedUI()
+                        }
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+                }
+            }
+        }
     }
     
     func enableNotificationsAllowedUI() {
