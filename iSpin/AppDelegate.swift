@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UIApplication.shared.registerForRemoteNotifications()
+        
+        // register actions
+        let notificationCenter = UNUserNotificationCenter.current()
+        let spinAction = UNNotificationAction(identifier: "spin-wheel", title: "Spin the wheel", options: [])
+        let cancelAction = UNNotificationAction(identifier: "cancel", title: "Cancel", options: [.destructive])
+        let category = UNNotificationCategory(identifier: "wheel", actions: [spinAction, cancelAction],
+                                              intentIdentifiers: [], options: [])
+        
+        notificationCenter.setNotificationCategories(Set([category]))
         
         return true
     }
