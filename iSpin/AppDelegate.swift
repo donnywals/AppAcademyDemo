@@ -72,4 +72,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         completionHandler()
     }
+    
+    // present in forground
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        guard notification.request.content.categoryIdentifier == "wheel" else {
+            completionHandler([])
+            return
+        }
+        
+        completionHandler([.alert, .sound])
+    }
 }
