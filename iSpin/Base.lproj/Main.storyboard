@@ -45,8 +45,8 @@
                     <connections>
                         <outlet property="enableNotificationsButton" destination="Aqf-l2-cFM" id="wzh-5F-JCG"/>
                         <outlet property="titleLabel" destination="4g3-Tx-esd" id="8oX-jU-A30"/>
-                        <segue destination="Bx1-Qh-96p" kind="presentation" id="Twy-gD-k4g"/>
-                        <segue destination="WXl-Ha-Y1e" kind="presentation" id="V0K-x1-QoX"/>
+                        <segue destination="Bx1-Qh-96p" kind="presentation" identifier="ShowPrizeWon" id="Twy-gD-k4g"/>
+                        <segue destination="WXl-Ha-Y1e" kind="presentation" identifier="ShowPrizeLost" id="V0K-x1-QoX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
