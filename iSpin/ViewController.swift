@@ -17,38 +17,13 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.getNotificationSettings { [weak self] settings in
-            DispatchQueue.main.async {
-                if settings.authorizationStatus == .authorized {
-                    self?.enableNotificationsAllowedUI()
-                } else if settings.authorizationStatus == .denied {
-                    self?.enableNotificationsDeniedUI()
-                }
-            }
-        }
+        // read current settings
+        
     }
 
     @IBAction func enableNotificationsTapped() {
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.getNotificationSettings { [weak self] settings in
-            if settings.authorizationStatus == .notDetermined {
-                notificationCenter.requestAuthorization(options: [.alert, .sound]) { success, error in
-                    DispatchQueue.main.async {
-                        if success {
-                            UIApplication.shared.registerForRemoteNotifications()
-                            self?.enableNotificationsAllowedUI()
-                        } else {
-                            self?.enableNotificationsDeniedUI()
-                        }
-                    }
-                }
-            } else {
-                DispatchQueue.main.async {
-                    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
-                }
-            }
-        }
+        // request permissions
+        
     }
     
     func enableNotificationsAllowedUI() {
