@@ -15,7 +15,33 @@
 		975BA1391DF476600069ECE2 /* PrizeWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BA1381DF476600069ECE2 /* PrizeWonViewController.swift */; };
 		975BA13B1DF476990069ECE2 /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BA13A1DF476990069ECE2 /* LostViewController.swift */; };
 		97793B921DF4967800DEB4B5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97793B911DF4967800DEB4B5 /* Data.swift */; };
+		97793B9A1DF49E7D00DEB4B5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97793B991DF49E7D00DEB4B5 /* NotificationService.swift */; };
+		97793B9E1DF49E7D00DEB4B5 /* iSpinWheelExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97793B9C1DF49E7D00DEB4B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 975BA11A1DF4720A0069ECE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97793B961DF49E7D00DEB4B5;
+			remoteInfo = iSpinWheelExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		97793BA21DF49E7D00DEB4B5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				97793B9E1DF49E7D00DEB4B5 /* iSpinWheelExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9748B4401DF4957F001C28EB /* iSpin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSpin.entitlements; sourceTree = "<group>"; };
@@ -29,10 +55,20 @@
 		975BA1381DF476600069ECE2 /* PrizeWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeWonViewController.swift; sourceTree = "<group>"; };
 		975BA13A1DF476990069ECE2 /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
 		97793B911DF4967800DEB4B5 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iSpinWheelExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		97793B991DF49E7D00DEB4B5 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		97793B9B1DF49E7D00DEB4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		975BA11F1DF4720A0069ECE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97793B941DF49E7D00DEB4B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				975BA1241DF4720A0069ECE2 /* iSpin */,
+				97793B981DF49E7D00DEB4B5 /* iSpinWheelExtension */,
 				975BA1231DF4720A0069ECE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				975BA1221DF4720A0069ECE2 /* iSpin.app */,
+				97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +129,15 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		97793B981DF49E7D00DEB4B5 /* iSpinWheelExtension */ = {
+			isa = PBXGroup;
+			children = (
+				97793B991DF49E7D00DEB4B5 /* NotificationService.swift */,
+				97793B9B1DF49E7D00DEB4B5 /* Info.plist */,
+			);
+			path = iSpinWheelExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,15 +148,34 @@
 				975BA11E1DF4720A0069ECE2 /* Sources */,
 				975BA11F1DF4720A0069ECE2 /* Frameworks */,
 				975BA1201DF4720A0069ECE2 /* Resources */,
+				97793BA21DF49E7D00DEB4B5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				97793B9D1DF49E7D00DEB4B5 /* PBXTargetDependency */,
 			);
 			name = iSpin;
 			productName = iSpin;
 			productReference = 975BA1221DF4720A0069ECE2 /* iSpin.app */;
 			productType = "com.apple.product-type.application";
+		};
+		97793B961DF49E7D00DEB4B5 /* iSpinWheelExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97793B9F1DF49E7D00DEB4B5 /* Build configuration list for PBXNativeTarget "iSpinWheelExtension" */;
+			buildPhases = (
+				97793B931DF49E7D00DEB4B5 /* Sources */,
+				97793B941DF49E7D00DEB4B5 /* Frameworks */,
+				97793B951DF49E7D00DEB4B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iSpinWheelExtension;
+			productName = iSpinWheelExtension;
+			productReference = 97793B971DF49E7D00DEB4B5 /* iSpinWheelExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -117,7 +183,7 @@
 		975BA11A1DF4720A0069ECE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = DonnyWals;
 				TargetAttributes = {
@@ -130,6 +196,11 @@
 								enabled = 1;
 							};
 						};
+					};
+					97793B961DF49E7D00DEB4B5 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4JMM8JMG3H;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -147,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				975BA1211DF4720A0069ECE2 /* iSpin */,
+				97793B961DF49E7D00DEB4B5 /* iSpinWheelExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +231,13 @@
 				975BA1301DF4720A0069ECE2 /* LaunchScreen.storyboard in Resources */,
 				975BA12D1DF4720A0069ECE2 /* Assets.xcassets in Resources */,
 				975BA12B1DF4720A0069ECE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97793B951DF49E7D00DEB4B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +256,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97793B931DF49E7D00DEB4B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97793B9A1DF49E7D00DEB4B5 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97793B9D1DF49E7D00DEB4B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97793B961DF49E7D00DEB4B5 /* iSpinWheelExtension */;
+			targetProxy = 97793B9C1DF49E7D00DEB4B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		975BA1291DF4720A0069ECE2 /* Main.storyboard */ = {
@@ -293,6 +388,7 @@
 		975BA1351DF4720A0069ECE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iSpin/iSpin.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -308,6 +404,7 @@
 		975BA1361DF4720A0069ECE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iSpin/iSpin.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -316,6 +413,34 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.donnywals.iSpin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		97793BA01DF49E7D00DEB4B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4JMM8JMG3H;
+				INFOPLIST_FILE = iSpinWheelExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.donnywals.iSpin.iSpinWheelExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		97793BA11DF49E7D00DEB4B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4JMM8JMG3H;
+				INFOPLIST_FILE = iSpinWheelExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.donnywals.iSpin.iSpinWheelExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -340,6 +465,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		97793B9F1DF49E7D00DEB4B5 /* Build configuration list for PBXNativeTarget "iSpinWheelExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97793BA01DF49E7D00DEB4B5 /* Debug */,
+				97793BA11DF49E7D00DEB4B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
