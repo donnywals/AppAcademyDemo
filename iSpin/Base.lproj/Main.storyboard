@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,11 +23,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable notifications and win prizes every day" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4g3-Tx-esd">
+                                <rect key="frame" x="32.5" y="28" width="310" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="dTo-fg-GlM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqf-l2-cFM">
+                                <rect key="frame" x="120" y="318.5" width="135" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Enable notifications"/>
                                 <connections>
@@ -34,12 +42,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4g3-Tx-esd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="8Ry-sv-jZd"/>
                             <constraint firstItem="4g3-Tx-esd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Dh0-gP-HVC"/>
                             <constraint firstItem="4g3-Tx-esd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ep8-k1-ifH"/>
                             <constraint firstItem="Aqf-l2-cFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjI-yv-pXc"/>
                             <constraint firstItem="Aqf-l2-cFM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jap-k5-XLs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4g3-Tx-esd" secondAttribute="trailing" constant="42" id="q1b-xz-D6W"/>
                         </constraints>
                     </view>
                     <connections>
@@ -66,11 +72,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome! You've won a prize" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-5A-AsR">
+                                <rect key="frame" x="32.5" y="300" width="310" height="67.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="Bce-G0-KJB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyM-yW-pcf">
+                                <rect key="frame" x="320" y="28" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closeTapped" destination="Bx1-Qh-96p" eventType="touchUpInside" id="LTy-kD-nMX"/>
@@ -79,10 +90,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="8vJ-5A-AsR" secondAttribute="trailing" constant="42" id="0MO-Am-j5U"/>
                             <constraint firstItem="8vJ-5A-AsR" firstAttribute="centerX" secondItem="UqC-0M-lOC" secondAttribute="centerX" id="5n5-MC-3G7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yyM-yW-pcf" secondAttribute="trailing" id="9Gl-WC-Q39"/>
-                            <constraint firstItem="8vJ-5A-AsR" firstAttribute="leading" secondItem="UqC-0M-lOC" secondAttribute="leadingMargin" constant="41" id="Fst-Cy-UJF"/>
                             <constraint firstItem="8vJ-5A-AsR" firstAttribute="centerY" secondItem="UqC-0M-lOC" secondAttribute="centerY" id="TM2-An-nOW"/>
                             <constraint firstItem="yyM-yW-pcf" firstAttribute="top" secondItem="EEJ-Nc-0Rh" secondAttribute="bottom" constant="8" id="k5L-DO-I4C"/>
                         </constraints>
@@ -105,11 +114,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D'oh you didn't win! Better luck next time..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHa-EJ-Vk5">
+                                <rect key="frame" x="32.5" y="300" width="310" height="67.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="quh-kd-jlC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zL-X6-Mkr">
+                                <rect key="frame" x="320" y="28" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closeTapped" destination="WXl-Ha-Y1e" eventType="touchUpInside" id="zDp-FV-irY"/>
@@ -119,11 +133,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6zL-X6-Mkr" firstAttribute="top" secondItem="5D2-j8-6eB" secondAttribute="bottom" constant="8" id="9x5-B0-ZPg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xHa-EJ-Vk5" secondAttribute="trailing" constant="42" id="OAs-HA-SdL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6zL-X6-Mkr" secondAttribute="trailing" id="Qsa-kt-EK9"/>
                             <constraint firstItem="xHa-EJ-Vk5" firstAttribute="centerX" secondItem="JL8-Of-7vT" secondAttribute="centerX" id="hFP-7X-1Ss"/>
                             <constraint firstItem="xHa-EJ-Vk5" firstAttribute="centerY" secondItem="JL8-Of-7vT" secondAttribute="centerY" id="sWy-ZX-UGB"/>
-                            <constraint firstItem="xHa-EJ-Vk5" firstAttribute="leading" secondItem="JL8-Of-7vT" secondAttribute="leadingMargin" constant="41" id="u3o-U6-fii"/>
                         </constraints>
                     </view>
                 </viewController>

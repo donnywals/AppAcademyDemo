@@ -15,8 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UIApplication.shared.registerForRemoteNotifications()
+        
         return true
     }
-
+    
+    // https://www.raywenderlich.com/123862/push-notifications-tutorial
+    // https://github.com/djacobs/PyAPNs
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Registered for remote notifications")
+        print(deviceToken.hexString)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Could not register for remote notifications")
+        print(error)
+    }
 }
 

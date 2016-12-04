@@ -14,9 +14,11 @@
 		975BA1301DF4720A0069ECE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975BA12E1DF4720A0069ECE2 /* LaunchScreen.storyboard */; };
 		975BA1391DF476600069ECE2 /* PrizeWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BA1381DF476600069ECE2 /* PrizeWonViewController.swift */; };
 		975BA13B1DF476990069ECE2 /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975BA13A1DF476990069ECE2 /* LostViewController.swift */; };
+		97793B921DF4967800DEB4B5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97793B911DF4967800DEB4B5 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9748B4401DF4957F001C28EB /* iSpin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSpin.entitlements; sourceTree = "<group>"; };
 		975BA1221DF4720A0069ECE2 /* iSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		975BA1251DF4720A0069ECE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		975BA1271DF4720A0069ECE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,7 @@
 		975BA1311DF4720A0069ECE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975BA1381DF476600069ECE2 /* PrizeWonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrizeWonViewController.swift; sourceTree = "<group>"; };
 		975BA13A1DF476990069ECE2 /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
+		97793B911DF4967800DEB4B5 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		975BA1241DF4720A0069ECE2 /* iSpin */ = {
 			isa = PBXGroup;
 			children = (
+				97793B901DF4966B00DEB4B5 /* Extensions */,
+				9748B4401DF4957F001C28EB /* iSpin.entitlements */,
 				975BA1371DF4764E0069ECE2 /* ViewControllers */,
 				975BA1251DF4720A0069ECE2 /* AppDelegate.swift */,
 				975BA1291DF4720A0069ECE2 /* Main.storyboard */,
@@ -76,6 +81,14 @@
 				975BA13A1DF476990069ECE2 /* LostViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		97793B901DF4966B00DEB4B5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				97793B911DF4967800DEB4B5 /* Data.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +125,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4JMM8JMG3H;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -152,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				975BA13B1DF476990069ECE2 /* LostViewController.swift in Sources */,
+				97793B921DF4967800DEB4B5 /* Data.swift in Sources */,
 				975BA1391DF476600069ECE2 /* PrizeWonViewController.swift in Sources */,
 				975BA1281DF4720A0069ECE2 /* ViewController.swift in Sources */,
 				975BA1261DF4720A0069ECE2 /* AppDelegate.swift in Sources */,
@@ -275,6 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iSpin/iSpin.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4JMM8JMG3H;
 				INFOPLIST_FILE = iSpin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,6 +309,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iSpin/iSpin.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4JMM8JMG3H;
 				INFOPLIST_FILE = iSpin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -316,6 +339,7 @@
 				975BA1361DF4720A0069ECE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
