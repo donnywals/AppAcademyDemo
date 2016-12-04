@@ -68,6 +68,8 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             viewController.performSegue(withIdentifier: "ShowPrizeLost", sender: nil)
         }
         
+        userDefaults?.removeObject(forKey: "did-win-prize")
+        
         completionHandler()
     }
 }
