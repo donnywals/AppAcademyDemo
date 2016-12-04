@@ -61,4 +61,3 @@ class ViewController: UIViewController {
         titleLabel.text = "You have disabled notifications for iSpin, go to your settings to enable notifications."
     }
 }
-
